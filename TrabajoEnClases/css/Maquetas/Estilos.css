@@ -1,0 +1,37 @@
+body{
+    background-color: #f0f0f0;
+
+
+}
+#contenedor{
+width: 500px;
+background-color: aqua;
+border: 1px,solid #000000;
+margin: 0px auto;
+
+}
+ul.menu{
+    list-style-type: none;
+    
+}
+#contenedor li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: yellow;
+}
+#contenedor li.par{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+#contenedor li.impar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aqua;
+}

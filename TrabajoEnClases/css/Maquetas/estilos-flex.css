@@ -1,0 +1,17 @@
+.conteiner{
+    display: flex;
+    /*flex-direction: row;*/
+    background-color: coral;
+    /*white-space: 400px;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;*/
+    flex-flow: row wrap-reverse;
+    justify-content: space-evenly;
+}
+.element{
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border: 1px solid black;
+    margin: 10px;
+}

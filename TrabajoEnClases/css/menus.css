@@ -1,0 +1,4 @@
+nav.horizontal{
+    list-style-type: none;
+    display: flex;
+}
