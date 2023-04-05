@@ -1,0 +1,25 @@
+.blanco {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+  .rojo {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+  }
+  
+  .azul {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+  }
