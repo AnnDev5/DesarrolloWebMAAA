@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styletablero.css">
+</head>
+<body>
+    <form action="tablero.php" method = "GET">
+    <div>
+    <label for="fila">Fila</label>
+    <input type="number" name="fila" min="1" max="5" required>
+    <label for="columna">Columna</label>
+    <input type="number" name="columna" min="1" max="5" required><br>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" required><br>
+    <label for="color">Color</label>
+    <input type="text" name="color" required><br>
+    <input type="submit" value="Introducir">
+    </div>
+    </form>
+</body>
+</html>

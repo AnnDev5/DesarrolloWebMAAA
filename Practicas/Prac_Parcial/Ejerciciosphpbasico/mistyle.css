@@ -1,0 +1,12 @@
+.rojo {
+    color: #FF0000;
+    font-size: 17px;
+}
+
+.bolded { font-weight: bold; }
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
