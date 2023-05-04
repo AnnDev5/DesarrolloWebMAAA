@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cuadrado {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      .cuadradooscuro {
+        width: 50px;
+        height: 50px;
+        border: 1px solid black;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let fila = prompt("Introduce el numero de Filas");
+      let columna = prompt("Introduce el numero de Columnas");
+      let nombre = prompt("Intruce un nombre");
+      let n = 0;
+      document.write(`<table style= "border: 1px solid black">`);
+      for (i = 0; i < parseInt(fila); i++) {
+        document.write(`<tr>`);
+        for (j = 0; j < parseInt(columna); j++) {
+          if ((i + j) % 2 == 0) {
+            if (n <= nombre.length) {
+              letra = nombre.charAt(n);
+              n++;
+              document.write(`<td class="cuadrado";>${letra}</td>`);
+            } else {
+              document.write(`<td class="cuadrado";>&nbsp</td>`);
+            }
+          } else {
+            document.write(`<td class="cuadradooscuro";>&nbsp</td>`);
+          }
+        }
+        document.write(`</tr>`);
+      }
+      document.write(`</table>`);
+    </script>
+  </body>
+</html>

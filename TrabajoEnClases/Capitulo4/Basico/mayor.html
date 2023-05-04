@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            border: 1px solid black;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            background-color: green;
+            color: white; 
+        }
+    </style>
+  </head>
+  <body>
+    <script>
+      let num1 = prompt("Introduce el primer numero");
+      let num2 = prompt("Introduce el segundo numero");
+      let num3 = prompt("Introduce el tercer numero");
+      if (num1 > num2) {
+        if (num1 > num3) {
+          document.write(`<div class="cuadrado";>El mayor es el Primer numero: ${num1}</div>`);
+        }
+      } else {
+        if (num2 > num3) {
+          document.write(`<div class="cuadrado";>El mayor es el Segundo numero: ${num2}</div>`);
+        } else {
+          if (num3 > num1) {
+            document.write(`<div class="cuadrado";>El mayor es el Tercer numero: ${num3}</div>`);
+          } else {
+            document.write(`<div class="cuadrado";>Los tres numeros son iguales</div>`);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

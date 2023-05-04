@@ -10,16 +10,19 @@
     $suma=[];
     for ($j=0;$j<$n;$j++)
     {
-    $suma[$j]=$_POST['vecA'.$j]+$_POST['vecB'.$j];
+        $resultado=0;
+        $resultado=$_POST['vecA'.$j]+$_POST['vecB'.$j];
+        $suma[$j]=$resultado;
     }
 
     for ($j=0;$j<$n;$j++)
     { 
-    echo '<div style="border: 1px solid;width: 50px; height: 50px; text-aling:center; display: flex; justify-content: center; align-items: center;">'.$suma[$j].'</div>';
+        echo '<div style="border: 1px solid;width: 50px; height: 50px; text-aling:center; display: flex; justify-content: center; align-items: center;">'.$_POST['vecA'.$j].'+'.$_POST['vecB'.$j].'</div>';
+        echo '<div style="border: 1px solid;width: 50px; height: 50px; text-aling:center; display: flex; justify-content: center; align-items: center;">'.$suma[$j].'</div>';
     }
 
 ?>
-<meta http-equiv="refresh" content="7;url=Maqueta1.html">
+<meta http-equiv="refresh" content="15;url=Maqueta1.html">
 </body>
 </html>
 <?php
