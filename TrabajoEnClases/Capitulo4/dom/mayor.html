@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="a">A </label>
+    <input type="number" name="a" id="a" />
+    <label for="b">B </label>
+    <input type="number" name="b" id="b" />
+    <label for="c">C </label>
+    <input type="number" name="c" id="c" />
+    <button type="button" id="boton">Mayor</button>
+    <script>
+      document.getElementById("boton").addEventListener("click", function () {
+        var num1 = document.getElementById("a").value;
+        var num2 = document.getElementById("b").value;
+        var num3 = document.getElementById("c").value;
+        if (num1 > num2) {
+          if (num1 > num3) {
+            document.getElementById('a').style.backgroundColor="yellow";
+            document.getElementById('a').style.color="blue";
+          }
+        } else {
+          if (num2 > num3) {
+            document.getElementById('b').style.backgroundColor="yellow";
+            document.getElementById('b').style.color="blue";
+          } else {
+            if (num3 > num1) {
+                document.getElementById('c').style.backgroundColor="yellow";
+                document.getElementById('c').style.color="blue";
+            } else {
+                document.write("Los tres numeros son iguales");
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
