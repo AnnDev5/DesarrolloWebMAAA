@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1 id="Fibonacci"> Calcular Fibonacci</h1>
-    <form name="form1" action='javascript:CalcularFibonacci' method="POST"></form>
-    Calcular Fibonacci del numero:
-    <input type="number" id="n" name="tNumero">
+    <form action='javascript:calcularFibonacci()' method="GET">
+    <div>
+    <label for="n">Calcular Fibonacci del numero:</label> 
+    <input type="number" id="n" name="n">
+    </div>
+    <input type="submit" value="calcular">
+    </form>
     <div id="contenido" style=" background-color: green; border: 1px solid red;">
     </div>
 <script>
     function calcularFibonacci(){
+    console.log(document.getElementById('n').value);
     var contenedor;
     contenedor = document.getElementById('contenido');
     var ajax = new XMLHttpRequest();
