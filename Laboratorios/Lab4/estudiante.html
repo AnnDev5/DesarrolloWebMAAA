@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        th{
+            background-color: aqua;
+            border: 1px solid black;
+            width: 30px;
+            height: 10px;
+        }
+        td{
+            background-color: whitesmoke;
+            border: 1px solid black;
+            width: 30px;
+            height: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="estudiantes.js"></script>
+    <script src="funciones.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt("Introduzca el numero de Estudiantes"));
+        var estudiantes=[];
+        document.write("<table>");
+        document.write("<tr>");
+        document.write("<th>"+ "Numero "+"</th>");
+        document.write("<th>"+ "Nombre "+"</th>");
+        document.write("<th>"+" Edad "+"</th>");
+        document.write("<th>"+ "Materia "+"</th>");
+        document.write("<th>"+ "Nota "+"</th>");
+        for(var i = 0;i<n;i++){
+            var nombre_apellidos = prompt("Introduzca el Apellido y Nombre");
+            var edad = prompt("Introduzca la Edad");
+            var mate = prompt("Introduzca la Materia");
+            var not = prompt("Introduzca la nota");
+            var alumno=new Estudiante(nombre_apellidos,edad,[{materia:mate,nota:not}])
+            estudiantes.push(alumno);
+            estudiantes[i].mostrarInformacion(i+1);
+        }
+        document.write("</table>");
+        mayor(estudiantes);
+    </script>
+</body>
+</html>
