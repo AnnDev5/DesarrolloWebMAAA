@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="numinicio">Tabla del </label>
+        <input type="text" id="numinicio" maxlength="2">
+    </div>
+
+    <div>
+        <input type="radio" name="operacion" value="suma" checked>suma
+        <input type="radio" name="operacion" value="resta">resta
+        <input type="radio" name="operacion" value="multiplicaion">multiplicacion
+        <input type="radio" name="operacion" value="division">division
+    </div>
+    <div>
+        <label for="numfinal">hasta el </label>
+        <input type="text" id="numfinal">
+    </div>
+    <div>
+        <button id="tabla" onclick="javascript:llenar()">Aplicar</button>
+    </div>
+</body>
+</html>

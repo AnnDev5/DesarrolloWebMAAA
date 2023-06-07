@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    Articulo <input type="text" name="articulo" id="articulo" />
+    <button onclick="agregar()">Agregar</button>
+    <ul id="lista"></ul>
+    <script>
+      function agregar() {
+        let articulo = document.getElementById("articulo").value;
+        lista = document.getElementById("lista");
+        const elemento = document.createElement("li");
+        elemento.innerHTML = articulo;
+        if (articulo.includes("de")) {
+          elemento.style.backgroundColor = "yellow";
+        }
+        lista.appendChild(elemento);
+      }
+    </script>
+  </body>
+</html>

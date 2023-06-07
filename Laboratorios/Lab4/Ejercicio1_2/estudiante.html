@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      th {
+        background-color: aqua;
+        border: 1px solid black;
+        padding: 8px;
+        width: 30px;
+        height: 20px;
+      }
+      td {
+        /*background-color: whitesmoke;*/
+        border: 1px solid black;
+        padding: 8px;
+        width: 30px;
+        height: 20px;
+      }
+      tr {
+        background-color: whitesmoke;
+        border: 1px solid black;
+        padding: 8px;
+        width: 30px;
+        height: 20px;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="estudiantes.js"></script>
+    <script src="funciones.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Lista de Alumnos</h1>
+    <div id="tabla"></div>
+    <button type="button" id="boton">Calcular Mayor</button>
+    <script>
+      var n = parseInt(prompt("Introduzca el numero de Estudiantes"));
+      var estudiantes = [];
+      for (var i = 0; i < n; i++) {
+        var nombre_apellidos = prompt("Introduzca el Apellido y Nombre");
+        var edad = prompt("Introduzca la Edad");
+        var mate = prompt("Introduzca la Materia");
+        var not = parseFloat(prompt("Introduzca la nota"));
+        var alumno = new Estudiante(nombre_apellidos, edad, {
+          materia: mate,
+          nota: not,
+        });
+        estudiantes.push(alumno);
+      }
+      mostrarInformacion(estudiantes);
+      document.getElementById("boton").addEventListener('click', function () {
+        document.getElementById('indice'+mayor(estudiantes)).style.backgroundColor ='green';
+      });
+    </script>
+  </body>
+</html>

@@ -16,6 +16,7 @@ function listarProvincia(id) {
     fetch('read_provincia.php?id='+id)
         .then(response => response.text())
         .then(data => {
+            console.log(data);
             objeto = JSON.parse(data);
             console.log(objeto);
                 //html = dibujar(objeto);
