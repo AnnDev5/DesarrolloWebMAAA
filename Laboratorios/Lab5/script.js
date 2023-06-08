@@ -32,7 +32,7 @@ function mostrarCalendario(){
     ajax.open("get", "calendario.php?mes="+mes+"&"+"anio="+anio);
     ajax.onreadystatechange = function(){
         if(ajax.readyState == 4 && ajax.status == 200)
-            contenido.innerHTML = ajax.responseText;
+            contenido.innerHTML += ajax.responseText;
     }
     ajax.send();
 }
@@ -47,24 +47,67 @@ function aplicarCambios(){
     document.getElementById(objeto).style.width = ancho+"px";
     document.getElementById(objeto).style.height = alto+"px";
 }
-function llenar(){
+function llenar() {
     var numinicio =document.getElementById("numinicio").value;
     var operacion=obtenerValor();
     var numfinal =document.getElementById("numfinal").value;
-    var ajax = new XMLHttpRequest()
-    ajax.open("get", "calcular.php?operacion="+operacion+"&"+"numinicio="+numinicio+"&"+"numfinal="+numfinal);
-    ajax.onreadystatechange = function(){
-        if(ajax.readyState == 4 && ajax.status == 200)
-            contenido.innerHTML = ajax.responseText;
+    fetch("calcular.php?operacion="+operacion+"&"+"numinicio="+numinicio+"&"+"numfinal="+numfinal)
+        .then(response => response.text())
+        .then(data => {
+            objeto = JSON.parse(data);
+                html = dibujar(objeto);
+                contenido.innerHTML = html;
+            }
+    );} 
+    function dibujar(objeto) {
+        let resultado=0;
+        let html=`<table>`
+       for (i=0;i<objeto[2];i++)
+       {
+        html+=`<tr>
+        <td class="celda">${objeto[1]} </td>`
+        switch(objeto[0]){
+            case "suma":html+=`<td class="celda">+</td>`;
+            resultado=suma(parseInt(objeto[1]),(i+1));
+            break;
+            case "resta":html+=`<td class="celda">-</td>`;
+            resultado=resta(parseInt(objeto[1]),(i+1));
+            break;
+            case "multiplicacion":html+=`<td class="celda">*</td>`;
+            resultado=multiplicacion(parseInt(objeto[1]),(i+1));
+            break;
+            case "division":html+=`<td class="celda">/</td>`;
+            resultado=division(parseInt(objeto[1]),(i+1));
+            break;
+            default:
+        }
+        
+        html+=`<td class="celda">${(i+1)}</td>
+        <td class="celda">=</td>
+        <td class="celda">${resultado}</td>
+        </tr>`
+       }
+       html+=`</table>`;
+       return html;
     }
-    ajax.send();
-} 
 function obtenerValor() {
-    var radios = document.getElementsByName('miGrupo');
+    var radios = document.getElementsByName('operacion');
     for (var i = 0; i < radios.length; i++) {
       if (radios[i].checked) {
         var valorSeleccionado = radios[i].value;
         return valorSeleccionado;
       }
     }
+  }
+  function suma(a,b){
+    return a+b;
+  }
+  function resta(a,b){
+    return a-b;
+  }
+  function multiplicacion(a,b){
+    return a*b;
+  }
+  function division(a,b){
+    return a/b;
   }
