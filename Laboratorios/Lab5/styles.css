@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.content{
+.content {
     margin: 0 auto;
     width: 900px;
     border: 2px solid rgb(102, 206, 53);
@@ -13,14 +13,14 @@
     flex-direction: column;
 }
 
-.principal{
+.principal {
     border-bottom: 2px solid rgb(102, 206, 53);
     width: 100%;
     min-height: 300px;
     display: flex;
 }
 
-#menu{
+#menu {
     width: 25%;
     display: flex;
     justify-content: center;
@@ -29,7 +29,7 @@
     padding: 10px;
 }
 
-#contenido{
+#contenido {
     width: 75%;
     border-right: 2px solid rgb(102, 206, 53);
     display: flex;
@@ -39,7 +39,7 @@
     padding: 10px;
 }
 
-#mensaje{
+#mensaje {
     width: 100%;
     height: 50px;
     border-bottom: 2px rgb(102, 206, 53);
@@ -51,7 +51,7 @@
 }
 
 
-#boton1{
+#boton1 {
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -61,7 +61,8 @@
     text-decoration: none;
     margin-bottom: 10px;
 }
-#boton2{
+
+#boton2 {
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -71,7 +72,8 @@
     text-decoration: none;
     margin-bottom: 10px;
 }
-#boton3{
+
+#boton3 {
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -81,6 +83,7 @@
     text-decoration: none;
     margin-bottom: 10px;
 }
+
 .tablero {
     display: flex;
     flex-wrap: wrap;
@@ -97,6 +100,7 @@
     font-size: 40px;
     cursor: pointer;
 }
+
 .celda {
     text-align: center;
     align-items: center;
@@ -107,4 +111,4 @@
     border-width: 1px;
     border-style: solid;
     border-color: black;
-  }
+}

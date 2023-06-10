@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-:root{
+:root {
     --red: rgb(102, 206, 53);
     --red2: rgb(0, 0, 255);
     --blue: rgb(0, 0, 255);
@@ -14,7 +14,7 @@
     --orange2: rgb(202, 133, 7);
 }
 
-.content{
+.content {
     margin: 0 auto;
     width: 900px;
     border: 2px solid var(--red);
@@ -22,7 +22,7 @@
     flex-direction: column;
 }
 
-#titulo{
+#titulo {
     width: 100%;
     background-color: var(--red2);
     height: 50px;
@@ -35,14 +35,14 @@
     padding: 15px;
 }
 
-.principal{
+.principal {
     border-bottom: 2px solid var(--red);
     width: 100%;
     min-height: 300px;
     display: flex;
 }
 
-#menu{
+#menu {
     width: 25%;
     display: flex;
     justify-content: center;
@@ -51,17 +51,39 @@
     padding: 10px;
 }
 
-#contenido{
+#contenido {
     width: 75%;
     border-left: 2px solid var(--red);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
 
-#mensaje{
+.seccionlateral {
+    width: 200px;
+}
+
+.seccionmedio {
+    width: 250px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio input[type="radio"] {
+    margin-right: 5px;
+}
+
+.radio label {
+    margin-bottom: 0;
+}
+
+#mensaje {
     width: 100%;
     height: 50px;
     border-bottom: 2px solid var(--red);
@@ -72,7 +94,7 @@
     color: white;
 }
 
-.a_1{
+.a_1 {
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -83,7 +105,7 @@
     margin-bottom: 10px;
 }
 
-.a_2{
+.a_2 {
     align-items: center;
     justify-content: center;
     width: 120px;
@@ -93,6 +115,7 @@
     text-decoration: none;
     margin-bottom: 10px;
 }
+
 .tablero {
     display: flex;
     flex-wrap: wrap;
@@ -108,4 +131,16 @@
     justify-content: center;
     font-size: 40px;
     cursor: pointer;
+}
+
+.celda {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 150px;
+    height: 30px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
 }

@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Tabla de Operaciones</h1>
-    <div>
-        <label for="numero-input">Número (menor a 10): </label>
-        <input type="text" id="numero-input" maxlength="2">
+  </head>
+  <body>
+    <div class="seccionlateral">
+      <label for="numfinal">Tabla del</label>
+      <input
+        type="text"
+        id="numinicio"
+        maxlength="2"
+        style="width: 30px; height: 30px; text-align: center"
+      />
+    </div>
+    <div class="seccionmedio">
+      <div class="radio">
+        <input type="radio" name="operacion" value="suma" checked />
+        <label for="suma"> Suma </label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="operacion" value="resta" />
+        <label for="resta"> Resta </label>
+      </div>
+    </div>
+    <div class="seccionmedio">
+      <div class="radio">
+        <input type="radio" name="operacion" value="multiplicacion" />
+        <label for="multiplicacion"> Multiplicacion </label>
+      </div>
+      <div class="radio">
+        <input type="radio" name="operacion" value="division" />
+        <label for="division"> Division </label>
+      </div>
     </div>
 
-    <div>
-        <input type="radio" name="operacion" value="suma" checked>suma
-        <input type="radio" name="operacion" value="resta">resta
-        <input type="radio" name="operacion" value="multiplicaion">multiplicacion
-        <input type="radio" name="operacion" value="division">division
+    <div class="seccionlateral">
+      <label for="numfinal">Hasta el</label>
+      <input
+        type="text"
+        id="numfinal"
+        style="width: 30px; height: 30px; text-align: center"
+      />
     </div>
     <div>
-        <label for="numero-input">Número: </label>
-        <input type="text" id="numero-input">
+      <button onclick="calcular()">Tabla</button>
     </div>
-    <div>
-        <button id="tabla-btn">Tabla</button>
-    </div>
-</body>
+  </body>
 </html>
