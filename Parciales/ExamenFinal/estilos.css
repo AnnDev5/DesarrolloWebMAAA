@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b6002d;
+  color: #fff;
+  padding: 20px;
+}
+
+#header_left {
+  height: 20%;
+  text-align: center;
+}
+
+#header_righ {
+  height: 20%;
+  text-align: center;
+}
+
+#header_mid {
+  height: 80%;
+  text-align: center;
+}
+
+.escudo {
+  height: 150px;
+  width: 150px;
+}
+
+.container {
+  display: flex;
+}
+
+#contenido {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#contenido2 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+nav {
+  background-color: #fae900;
+  width: 200px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #eee;
+}
+
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: #1100ff;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla {
+  display: flex;
+  flex-direction: column;
+  /*gap: 10px;*/
+  align-items: center;
+}
+
+.cell {
+  padding: 10px;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  /*gap: 10px;*/
+}
+
+.tarjeta {
+  padding: 10px;
+  width: 200px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0a4db3;
+  gap: 5px;
+  border-radius: 10px
+}
